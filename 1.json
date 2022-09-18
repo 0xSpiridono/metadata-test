@@ -1,31 +1,29 @@
 {
+    "name": "When Edgehogs Fly #1",
+    "external_link": "edgehogs.io/",
+    "image": "https://datastorage.s3.filebase.com/Edgehogs/game-thumbnails/preview.png",
     "attributes": [
         {
-            "trait_type": "Armor",
-            "value": "ɯɹoM ǝɥʇ ɟo ƃuᴉssǝlq"
+            "trait_type": "Aircraft",
+            "value": "UFO"
         },
         {
-            "trait_type": "Back",
-            "value": "ʍoq uɐᴉɹᴉ∩"
+            "trait_type": "Obstacles",
+            "value": "Spikes"
         },
         {
-            "trait_type": "Background",
-            "value": "pɹǝZ"
+            "trait_type": "Ground",
+            "value": "Shrubs"
         },
         {
-            "trait_type": "Body",
-            "value": "puoqɐƃɐΛ ǝldɯᴉS"
+            "trait_type": "Scenery",
+            "value": "Green Field"
         },
         {
-            "trait_type": "Hair",
-            "value": "ssǝuʞɹɐp s,puoqɐƃɐΛ"
-        },
-        {
-            "trait_type": "Mask",
-            "value": "ǝɔɐɹq s,ɹoqᴉS"
+            "trait_type": "Sky",
+            "value": "Sunny Day"
         }
     ],
-    "description": "˙∀┴פ∀M ˙ɐᴉlɐɹʇsn∀ uᴉ ɥʇɐǝp ʎluo 'dɐɯ ou sᴉ ǝɹǝɥ┴ ˙0ƆƆ ˙ʇuᴉW ǝǝɹℲ ˙ʎluO ʇɔɐɹʇuoƆ puɐ ɐᴉlɹʇsn∀ ˙ǝʇᴉsqǝM oN",
-    "image": "https://data.mypinata.cloud/ipfs/QmeHhTAREchefUzsLjK2q2fW715dDZUdTbYrP5Tkgb9Cwk/1.png",
-    "name": "ɐᴉlɹʇsn∀ oʇ ƃuᴉoפ ll∀ ǝɹɐ ǝM #1"
+    "animation_url": "https://datastorage.s3.filebase.com/Edgehogs/game-htmls/1.html",
+    "description": "When Edgehogs fly is a generatve NFT game - tap to thrust, but how long can you last?"
 }
