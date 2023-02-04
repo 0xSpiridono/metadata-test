@@ -1,0 +1,14 @@
+{
+    "name": "EAT ME #0",
+    "description": "",
+    "external_url": "",
+    "animation_url": "https://datastorage.s3.filebase.com/Shrooms/test.html",
+    "image": "https://ipfs.filebase.io/ipfs/QmNaY6gXuUJQsqKgALrVE5hN1iX2hohS11U2QmebSBGPMQ",
+    "attributes": [
+      {
+        "trait_type": "Type",
+        "value": "Magic"
+      }
+
+    ]
+  }
