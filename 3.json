@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "EAT ME #0",
     "description": "",
@@ -11,4 +12,19 @@
       }
 
     ]
+=======
+{
+    "name": "EAT ME #0",
+    "description": "",
+    "external_url": "",
+    "animation_url": "https://datastorage.s3.filebase.com/Shrooms/test.html",
+    "image": "https://ipfs.filebase.io/ipfs/QmNaY6gXuUJQsqKgALrVE5hN1iX2hohS11U2QmebSBGPMQ",
+    "attributes": [
+      {
+        "trait_type": "Type",
+        "value": "Magic"
+      }
+
+    ]
+>>>>>>> d701643b3b16ed56bc854f67806e6b51e0435eea
   }
