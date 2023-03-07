@@ -1,7 +1,7 @@
 {
     "name": "IPFS test",
     "description": "Description",
-    "external_url": "",
+    "external_url": "test",
     "traits": [
         {
             "trait_type": "Background",

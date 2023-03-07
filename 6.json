@@ -1,0 +1,18 @@
+{
+    "name": "IPFS test",
+    "description": "Description",
+    "external_url": "test",
+    "traits": [
+        {
+            "trait_type": "Background",
+            "value": "Purple"
+        },
+        {
+            "trait_type": "Back",
+            "value": "Classic"
+        }
+
+    ],
+    
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyBpbWFnZS1yZW5kZXJpbmc9J3BpeGVsYXRlZCcgaGVpZ2h0PSc4MDAnIHdpZHRoPSc4MDAnPg0KICAgIDxmb3JlaWduT2JqZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSc4MDAnIGhlaWdodD0nODAwJz48aW1nIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sJyBoZWlnaHQ9JzgwMCcgd2lkdGg9JzgwMCcgc3JjPSdodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtY1JOVmVZVTFDZU1lMnlEMUhLcGc1YnZCUUNmY1c1eFpwNjdIWVNzdEF6U1onLz48L2ZvcmVpZ25PYmplY3Q+DQogICAgPGZvcmVpZ25PYmplY3QgeD0nMCcgeT0nMCcgd2lkdGg9JzgwMCcgaGVpZ2h0PSc4MDAnPjxpbWcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwnIGhlaWdodD0nODAwJyB3aWR0aD0nODAwJyBzcmM9J2h0dHBzOi8vaGVyb2VzLm15cGluYXRhLmNsb3VkL2lwZnMvUW1Zb3RhckVNSjk4TUhmWkdES2hzZ0NjWlU1NEV6VFJQQ3VTODh2RzlQQlV0ZCcvPjwvZm9yZWlnbk9iamVjdD4NCiAgICA8Zm9yZWlnbk9iamVjdCB4PScwJyB5PScwJyB3aWR0aD0nODAwJyBoZWlnaHQ9JzgwMCc+PGltZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCcgaGVpZ2h0PSc4MDAnIHdpZHRoPSc4MDAnIHNyYz0naHR0cHM6Ly9oZXJvZXMubXlwaW5hdGEuY2xvdWQvaXBmcy9RbVp1V0tjTVJSUlAyOGVDRnE3b1oxOVZIcDVmS3NIZktlTFB2Umg5QWhRdzNHJy8+PC9mb3JlaWduT2JqZWN0Pg0KPC9zdmc+DQoNCg=="
+}
