@@ -1,0 +1,80 @@
+{
+    "name": "Citizen #1",
+    "attributes": [
+        {
+            "trait_type": "Class",
+            "value": "CEO"
+        },
+        {
+            "trait_type": "Race",
+            "value": "Demon"
+        },
+        {
+            "trait_type": "Strength",
+            "max_value": 100,
+            "value": 96
+        },
+        {
+            "trait_type": "Intelligence",
+            "max_value": 100,
+            "value": 82
+        },
+        {
+            "trait_type": "Attractiveness",
+            "max_value": 100,
+            "value": 83
+        },
+        {
+            "trait_type": "Tech Skill",
+            "max_value": 100,
+            "value": 89
+        },
+        {
+            "trait_type": "Cool",
+            "max_value": 100,
+            "value": 85
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Bloodshot"
+        },
+        {
+            "trait_type": "Ability",
+            "value": "Hard Gut"
+        },
+        {
+            "trait_type": "Location",
+            "value": "Omnipresent"
+        },
+        {
+            "trait_type": "Additional Item",
+            "value": "None"
+        },
+        {
+            "trait_type": "Weapon",
+            "value": "Light Saber"
+        },
+        {
+            "trait_type": "Vehicle",
+            "value": "Jet Pack"
+        },
+        {
+            "trait_type": "Apparel",
+            "value": "Space Suit"
+        },
+        {
+            "trait_type": "Helm",
+            "value": "Gold Skull"
+        },
+        {
+            "trait_type": "Reward Rate",
+            "value": 15
+        },
+        {
+            "trait_type": "Gender",
+            "value": "Male"
+        }
+    ],
+    "description": "Byt.io or death!",
+    "image_data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAxMjAwIDEyMDAiPjxpbWFnZSBocmVmPSJodHRwczovL25lb3Rva3lvLm15cGluYXRhLmNsb3VkL2lwZnMvUW1QTFc2dTVNUnV0MWI4aXlWYzQ3RVQ1ekFqOVZhRzJHd3lqY3VLTG9ldFdzVC9iYWNrZ3JvdW5kLzEwLnBuZyIvPjxpbWFnZSBocmVmPSJodHRwczovL25lb3Rva3lvLm15cGluYXRhLmNsb3VkL2lwZnMvUW1QTFc2dTVNUnV0MWI4aXlWYzQ3RVQ1ekFqOVZhRzJHd3lqY3VLTG9ldFdzVC93ZWFwb24vMTYtMC5wbmciLz48aW1hZ2UgaHJlZj0iaHR0cHM6Ly9uZW90b2t5by5teXBpbmF0YS5jbG91ZC9pcGZzL1FtUExXNnU1TVJ1dDFiOGl5VmM0N0VUNXpBajlWYUcyR3d5amN1S0xvZXRXc1QvYm9keS82LnBuZyIvPjxpbWFnZSBocmVmPSJodHRwczovL25lb3Rva3lvLm15cGluYXRhLmNsb3VkL2lwZnMvUW1QTFc2dTVNUnV0MWI4aXlWYzQ3RVQ1ekFqOVZhRzJHd3lqY3VLTG9ldFdzVC9jbG90aC8zOS5wbmciLz48aW1hZ2UgaHJlZj0iaHR0cHM6Ly9uZW90b2t5by5teXBpbmF0YS5jbG91ZC9pcGZzL1FtUExXNnU1TVJ1dDFiOGl5VmM0N0VUNXpBajlWYUcyR3d5amN1S0xvZXRXc1QvaGFuZC9tZWxlZS82LnBuZyIvPjxpbWFnZSBocmVmPSJodHRwczovL25lb3Rva3lvLm15cGluYXRhLmNsb3VkL2lwZnMvUW1QTFc2dTVNUnV0MWI4aXlWYzQ3RVQ1ekFqOVZhRzJHd3lqY3VLTG9ldFdzVC93ZWFwb24vMTYucG5nIi8+PGltYWdlIGhyZWY9Imh0dHBzOi8vbmVvdG9reW8ubXlwaW5hdGEuY2xvdWQvaXBmcy9RbVBMVzZ1NU1SdXQxYjhpeVZjNDdFVDV6QWo5VmFHMkd3eWpjdUtMb2V0V3NUL2hlbG0vNDAucG5nIi8+PGltYWdlIGhyZWY9Imh0dHBzOi8vbmVvdG9reW8ubXlwaW5hdGEuY2xvdWQvaXBmcy9RbVBMVzZ1NU1SdXQxYjhpeVZjNDdFVDV6QWo5VmFHMkd3eWpjdUtMb2V0V3NUL2Nsb3RoLzM5LTEucG5nIi8+PC9zdmc+"
+}
