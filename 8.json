@@ -1,0 +1,12 @@
+{
+    "name": "Pepe Ordinal #1 ",
+    "description": "",
+    "traits": [
+        {
+            "trait_type": "test",
+            "value": "test"
+        }
+    ],
+    
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyBpbWFnZS1yZW5kZXJpbmc9J3BpeGVsYXRlZCcgaGVpZ2h0PSc4MDAnIHdpZHRoPSc4MDAnPg0KICAgIDxmb3JlaWduT2JqZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSc4MDAnIGhlaWdodD0nODAwJz48aW1nIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sJyBoZWlnaHQ9JzgwMCcgd2lkdGg9JzgwMCcgc3JjPSdodHRwczovL3R1cmJvLm9yZGluYWxzd2FsbGV0LmNvbS9pbnNjcmlwdGlvbi9jb250ZW50LzA3ZTA0M2Y5YTY0NTQzZGE0YTIzMDhlNmFjNTc2NWM4Zjc5ZDIxZTkyNTYwMjQ0MjEwZDRhNTQ4YmUyNDg0M2FpMCcvPg0KICAgIDwvZm9yZWlnbk9iamVjdD4NCjwvc3ZnPg0KDQo="
+}
