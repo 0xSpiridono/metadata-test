@@ -1,7 +1,7 @@
 {
-    "name": "Edgehog Ordinal #1 ",
-    "description": "Edgehogs Ordinals are 100% on-chain on ETH and BTC. Check inscription status: https://edgehogs.io/ordinals/1",
-    "external_url": "https://edgehogs.io/ordinals/1",
+    "name": "IPFS test",
+    "description": "Description",
+    "external_url": "",
     "traits": [
         {
             "trait_type": "Background",
@@ -10,31 +10,8 @@
         {
             "trait_type": "Back",
             "value": "Classic"
-        },
-        {
-            "trait_type": "Pants",
-            "value": "Knight Armor"
-        },
-        {
-            "trait_type": "Clothes",
-            "value": "Rockstar"
-        },
-        {
-            "trait_type": "Headgear",
-            "value": "None"
-        },
-        {
-            "trait_type": "Shoes",
-            "value": "Black Shoes"
-        },
-        {
-            "trait_type": "Item",
-            "value": "None"
-        },
-        {
-            "trait_type": "Eyes",
-            "value": "Evil Genius"
         }
+
     ],
     
     "image": "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA4MDAgODAwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiM5RTk3OEUiLz4NCjxpbWFnZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBocmVmPSJodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtY1JOVmVZVTFDZU1lMnlEMUhLcGc1YnZCUUNmY1c1eFpwNjdIWVNzdEF6U1oiLz4NCjxpbWFnZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBocmVmPSJodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtWW90YXJFTUo5OE1IZlpHREtoc2dDY1pVNTRFelRSUEN1Uzg4dkc5UEJVdGQiLz4NCjxpbWFnZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBocmVmPSJodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtWnVXS2NNUlJSUDI4ZUNGcTdvWjE5VkhwNWZLc0hmS2VMUHZSaDlBaFF3M0ciLz4NCjxpbWFnZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBocmVmPSJodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtZVBFSno4N21SalF0OUJtWWliMTRGY3huOGoxM1hrZGo2TWZZb1VaYlFpNzkiLz4NCjxpbWFnZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBocmVmPSJodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtYjdpcXpnRkEzTmNKSlF1dFdZRmdUOTQ2YmN5NUp3ZkdIZXZ6YzlURkZYdDEiLz4NCjxpbWFnZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBocmVmPSJodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtZDQzRVB5WTZnNnBYWERwQ0F4eU1qdFI1Vkhicks3ekxhclR5UGpkNEs2Q3ciLz4NCjxpbWFnZSB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBocmVmPSJodHRwczovL2hlcm9lcy5teXBpbmF0YS5jbG91ZC9pcGZzL1FtZUxFVnozSnkyRmhXUkJyUXFOOHN6eVVoWXRqRnhEUEdWSHhuVEpZMXhkMmgiLz4NCjwvc3ZnPg0K"
