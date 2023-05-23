@@ -1,41 +1,25 @@
 {
-  "name": "ELVEN #0",
-  "description": "ELVEN is the second full-scale NFT project from acclaimed young artist Yasmeen Suleiman. ELVEN Launched on Yasmeen's 13th birthday in September 2021 and sold out in 6 days. ELVEN evolved in September 2022 with 100% of the assets being redrawn and all 6000 ELVEN growing up.",
-  "external_url": "",
-  "animation_url": "https://datastorage.s3.filebase.com/Elven/HTMLs/0.html",
-  "image": "https://datastorage.s3.filebase.com/Elven/images_new/0.png",
+  "name": "Spiridono",
+  "description": "",
+  "external_url": "https://twitter.com/0xSpiridono",
+  "animation_url": "",
+  "image": "https://ipfs.io/ipfs/QmdZaXmKWBhvuyzrPPKDSY9HhrwspoRQupvsp3fD37tdX6",
   "attributes": [
     {
-      "trait_type": "Background",
-      "value": "Rainbow Hue"
-    },
-    {
-      "trait_type": "Skin",
-      "value": "Snow"
-    },
-    {
-      "trait_type": "Clothes",
-      "value": "Crop Top With Hoodie Orange and Blue"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "Chocked"
-    },
-    {
-      "trait_type": "Eyes",
-      "value": "Double Liner Blue"
+      "trait_type": "Type",
+      "value": "Photo"
     },
     {
       "trait_type": "Hair",
-      "value": "Bob Cut Pink"
+      "value": "Nuclear"
     },
     {
-      "trait_type": "Ears",
-      "value": "Snow Forest"
+      "trait_type": "Accessory",
+      "value": "Pomegranate"
     },
     {
-      "trait_type": "Horns",
-      "value": "Small Horns"
+      "trait_type": "Background",
+      "value": "Wall"
     }
   ]
 }
