@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv='Content-Type' content='text/html; charset=windows-1252'>
-    <title>Interactive NFT</title>
+    <title>Interactive NFT - PFP First</title>
     <style>
         html,
         body {
@@ -86,7 +86,7 @@
             position: relative;
         }
 
-        /* State when showing the 'back' view (PFP) */
+        /* State when showing the 'back' view (Pixels) */
         .flip-container.show-back .flipper {
             transform: rotateY(180deg);
         }
@@ -130,13 +130,13 @@
 <body>
     <!-- Button Container -->
     <div id='buttonContainer'>
-        <!-- Button for PFP View (Back) -->
-        <button id='buttonPFP' class='view-button'>
-            <img id='buttonImagePFP' src='https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_PFP_Off.png' alt='Switch to PFP View'>
+        <!-- Button for PFP View (Front) - DEFAULT -->
+        <button id='buttonPFP' class='view-button active'>
+            <img id='buttonImagePFP' src='https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_PFP.png' alt='Switch to PFP View'>
         </button>
-        <!-- Button for Pixels View (Front) -->
-        <button id='buttonPixels' class='view-button active'>
-            <img id='buttonImagePixels' src='https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_Pixels.png' alt='Switch to Pixels View'>
+        <!-- Button for Pixels View (Back) -->
+        <button id='buttonPixels' class='view-button'>
+            <img id='buttonImagePixels' src='https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_Pixels_Off.png' alt='Switch to Pixels View'>
         </button>
     </div>
 
@@ -144,12 +144,12 @@
     <div class="flip-container">
         <div class="flipper">
           <div class="front">
-            <!-- PIXELS VIEW IMAGE -->
-            <img src="https://ipfs.pinnr.app/ipfs/bafybeiertkpvtuhfhyzl2ds727tdjjasmo2oo2h4pa35n6zfzgw425p3h4/1.png" alt="Pixels View Image">
+            <!-- PFP VIEW IMAGE (NOW FRONT) -->
+            <img src="https://ipfs.pinnr.app/ipfs/bafybeiertkpvtuhfhyzl2ds727tdjjasmo2oo2h4pa35n6zfzgw425p3h4/1.png" alt="PFP View Image">
           </div>
           <div class="back">
-            <!-- PFP VIEW IMAGE -->
-            <img src="https://ipfs.pinnr.app/ipfs/bafybeibyznryi5paxbhxmjui6h24bbouh3mvwbtkqkz4tffmzmij3y4ph4/1.gif" alt="PFP View Image">
+            <!-- PIXELS VIEW IMAGE (NOW BACK) -->
+            <img src="https://ipfs.pinnr.app/ipfs/bafybeibyznryi5paxbhxmjui6h24bbouh3mvwbtkqkz4tffmzmij3y4ph4/1.gif" alt="Pixels View Image">
           </div>
         </div>
     </div>
@@ -178,41 +178,43 @@
             };
 
             // --- Function to Update Button States ---
+            // showBack = true means the BACK (Pixels) view is showing
+            // showBack = false means the FRONT (PFP) view is showing
             function updateButtonStates(showBack) {
                 if (showBack) {
-                    // Show PFP (Back) view is active
-                    $buttonPFP.addClass('active').prop('disabled', true); // Disable PFP button
-                    $buttonPixels.removeClass('active').prop('disabled', false); // Enable Pixels button
-                    $buttonImagePFP.attr('src', buttonImages.pfp.on);
-                    $buttonImagePixels.attr('src', buttonImages.pixels.off);
-                } else {
-                    // Show Pixels (Front) view is active
+                    // Show PIXELS (Back) view is active
                     $buttonPixels.addClass('active').prop('disabled', true); // Disable Pixels button
                     $buttonPFP.removeClass('active').prop('disabled', false); // Enable PFP button
                     $buttonImagePixels.attr('src', buttonImages.pixels.on);
                     $buttonImagePFP.attr('src', buttonImages.pfp.off);
+                } else {
+                    // Show PFP (Front) view is active
+                    $buttonPFP.addClass('active').prop('disabled', true); // Disable PFP button
+                    $buttonPixels.removeClass('active').prop('disabled', false); // Enable Pixels button
+                    $buttonImagePFP.attr('src', buttonImages.pfp.on);
+                    $buttonImagePixels.attr('src', buttonImages.pixels.off);
                 }
             }
 
             // --- Event Handlers ---
-            // Click Pixels Button (Show Front)
+            // Click Pixels Button (Show Back)
             $buttonPixels.on("click", function () {
                 if (!$buttonPixels.hasClass('active')) { // Only act if not already active
-                    $flipContainer.removeClass('show-back');
-                    updateButtonStates(false); // Update buttons to show Pixels as active
+                    $flipContainer.addClass('show-back'); // Add class to show the back (Pixels)
+                    updateButtonStates(true); // Update buttons to show Pixels as active
                 }
             });
 
-            // Click PFP Button (Show Back)
+            // Click PFP Button (Show Front)
             $buttonPFP.on("click", function () {
                  if (!$buttonPFP.hasClass('active')) { // Only act if not already active
-                    $flipContainer.addClass('show-back');
-                    updateButtonStates(true); // Update buttons to show PFP as active
+                    $flipContainer.removeClass('show-back'); // Remove class to show the front (PFP)
+                    updateButtonStates(false); // Update buttons to show PFP as active
                  }
             });
 
             // --- Initial State ---
-            // Assuming Pixels view (front) is the default
+            // PFP view (front) is the default, which corresponds to showBack = false
             updateButtonStates(false); // Set initial button states
 
         }); // End document ready
