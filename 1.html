@@ -1,99 +1,222 @@
 <!DOCTYPE html>
 <html>
-    <head><meta http-equiv='Content-Type' content='text/html; charset=windows-1252'>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=windows-1252'>
+    <title>Interactive NFT</title>
     <style>
-            html,
-            body {
-                margin: 0;
-                overflow: hidden;
-            }
-            #buttonContainer {
-                position: absolute;
-                z-index: 3;
-                display: none;
-            }
-            #button {
-                background-color: transparent;
-                background-repeat: no-repeat;
-                border: none;
-                cursor: pointer;
-                overflow: hidden;
-                outline: none;
-                opacity: 0.1;
-            }
-            #buttonImage {
-                width: 50px;
-                max-width: 100%;
-                height: auto;
-            }
-            #button:hover {
-                transform: scale(1.5);
-                transition: all .2s ease-in-out;
-                display: block;
-                opacity: 1;
-            }
-            #button:active {
-                transform: scale(2.5);
-            }
-            .flip-container {
-            perspective: 1000px;
-            }
+        html,
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000; /* Optional: background for contrast */
+            height: 100%; /* Ensure body takes full height */
+        }
 
-            .flip-container.hover .flipper {
-            transform: rotateY(180deg);
-            }
-            .flip-container,
-            .front,
-            .back {
-            width: 100%;
-            height: auto;
+        #buttonContainer {
             position: absolute;
-            }
-            .flipper {
-            transition: 0.6s;
+            z-index: 10; /* Ensure buttons are above content */
+            top: 15px;
+            left: 15px;
+            display: flex; /* Use flexbox for button layout */
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 8px; /* Space between buttons */
+        }
+
+        .view-button {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            opacity: 0.6; /* Start slightly visible */
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth transition */
+            padding: 0; /* Remove default padding */
+            line-height: 0; /* Prevent extra space */
+        }
+
+        .view-button img {
+            width: 45px; /* Adjust size as needed */
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove potential bottom space */
+        }
+
+        .view-button:hover {
+            transform: scale(1.15); /* Slightly larger hover */
+            opacity: 1;
+        }
+
+        .view-button:active {
+            transform: scale(1.3); /* Larger active press */
+        }
+
+        /* Style for the currently active button */
+        .view-button.active {
+            opacity: 1;
+            cursor: default; /* Indicate it's the current view */
+            /* Optional: Add a visual cue for active state */
+            /* box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); */
+            /* filter: drop-shadow(0 0 5px cyan); */
+        }
+        .view-button.active:hover {
+             transform: scale(1.0); /* No scale change on hover when active */
+        }
+        .view-button.active:active {
+             transform: scale(1.0); /* No scale change on click when active */
+        }
+
+
+        /* --- Awesome Flip Transition --- */
+
+        .flip-container {
+            perspective: 1500px; /* More pronounced 3D effect */
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: relative;
+        }
+
+        .flipper {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Funky elastic bounce */
+            /* Alternative smooth transition: */
+            /* transition: transform 0.8s ease-in-out; */
             transform-style: preserve-3d;
             position: relative;
-            }
-            .front,
-            .back {
-            backface-visibility: hidden;
+        }
+
+        /* State when showing the 'back' view (PFP) */
+        .flip-container.show-back .flipper {
+            transform: rotateY(180deg);
+        }
+
+        .front,
+        .back {
+            backface-visibility: hidden; /* Hide the side facing away */
             position: absolute;
             top: 0;
             left: 0;
-            }
-            .front {
-            z-index: 2;
-            transform: rotateY(0deg);
-            }
-            .back {
-            transform: rotateY(180deg);
-            }
+            width: 100%;
+            height: 100%;
+            /* Center the image within the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ensure images scale nicely within their containers */
+        .front img,
+        .back img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;  /* Let the image decide based on aspect ratio */
+            height: auto; /* Let the image decide based on aspect ratio */
+            object-fit: contain; /* Scale while preserving aspect ratio */
+        }
+
+        .front {
+            z-index: 2; /* Front is initially on top */
+            transform: rotateY(0deg); /* Explicitly state initial rotation */
+        }
+
+        .back {
+            transform: rotateY(180deg); /* Back is initially rotated */
+        }
+
     </style>
-    </head>
+</head>
 
-    <body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
-            $(document).on("click", "#button", function () {
-                $(".flip-container").toggleClass('hover');
+<body>
+    <!-- Button Container -->
+    <div id='buttonContainer'>
+        <!-- Button for PFP View (Back) -->
+        <button id='buttonPFP' class='view-button'>
+            <img id='buttonImagePFP' src='https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_PFP_Off.png' alt='Switch to PFP View'>
+        </button>
+        <!-- Button for Pixels View (Front) -->
+        <button id='buttonPixels' class='view-button active'>
+            <img id='buttonImagePixels' src='https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_Pixels.png' alt='Switch to Pixels View'>
+        </button>
+    </div>
+
+    <!-- Flip Container -->
+    <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <!-- PIXELS VIEW IMAGE -->
+            <img src="https://ipfs.pinnr.app/ipfs/bafybeiertkpvtuhfhyzl2ds727tdjjasmo2oo2h4pa35n6zfzgw425p3h4/1.png" alt="Pixels View Image">
+          </div>
+          <div class="back">
+            <!-- PFP VIEW IMAGE -->
+            <img src="https://ipfs.pinnr.app/ipfs/bafybeibyznryi5paxbhxmjui6h24bbouh3mvwbtkqkz4tffmzmij3y4ph4/1.gif" alt="PFP View Image">
+          </div>
+        </div>
+    </div>
+
+    <!-- JavaScript (jQuery) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- Use a slightly newer jQuery version -->
+    <script>
+        $(document).ready(function() {
+            // --- Cache Elements ---
+            const $flipContainer = $(".flip-container");
+            const $buttonPixels = $("#buttonPixels");
+            const $buttonPFP = $("#buttonPFP");
+            const $buttonImagePixels = $("#buttonImagePixels");
+            const $buttonImagePFP = $("#buttonImagePFP");
+
+            // --- Button Image URLs ---
+            const buttonImages = {
+                pixels: {
+                    on: 'https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_Pixels.png',
+                    off: 'https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_Pixels_Off.png'
+                },
+                pfp: {
+                    on: 'https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_PFP.png',
+                    off: 'https://raw.githubusercontent.com/0xSpiridono/metadata-test/master/Frame_PFP_Off.png'
+                }
+            };
+
+            // --- Function to Update Button States ---
+            function updateButtonStates(showBack) {
+                if (showBack) {
+                    // Show PFP (Back) view is active
+                    $buttonPFP.addClass('active').prop('disabled', true); // Disable PFP button
+                    $buttonPixels.removeClass('active').prop('disabled', false); // Enable Pixels button
+                    $buttonImagePFP.attr('src', buttonImages.pfp.on);
+                    $buttonImagePixels.attr('src', buttonImages.pixels.off);
+                } else {
+                    // Show Pixels (Front) view is active
+                    $buttonPixels.addClass('active').prop('disabled', true); // Disable Pixels button
+                    $buttonPFP.removeClass('active').prop('disabled', false); // Enable PFP button
+                    $buttonImagePixels.attr('src', buttonImages.pixels.on);
+                    $buttonImagePFP.attr('src', buttonImages.pfp.off);
+                }
+            }
+
+            // --- Event Handlers ---
+            // Click Pixels Button (Show Front)
+            $buttonPixels.on("click", function () {
+                if (!$buttonPixels.hasClass('active')) { // Only act if not already active
+                    $flipContainer.removeClass('show-back');
+                    updateButtonStates(false); // Update buttons to show Pixels as active
+                }
             });
-        </script>
 
-        <div id='buttonContainer' style='left: 14px; top: 16px; display: block;'>
-            <button id='button'><img id='buttonImage' src='https://ipfs.io/ipfs/QmW6rvzk8QoHuZxkrt86BQTH9jJoQ6RVs6xfmWUi35nFQF' style='left: 0px; top: 0px;'></button>
-        </div>
+            // Click PFP Button (Show Back)
+            $buttonPFP.on("click", function () {
+                 if (!$buttonPFP.hasClass('active')) { // Only act if not already active
+                    $flipContainer.addClass('show-back');
+                    updateButtonStates(true); // Update buttons to show PFP as active
+                 }
+            });
 
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            <div class="flipper">
-              <div class="front">
-                <img src="https://ipfs.pinnr.app/ipfs/bafybeiertkpvtuhfhyzl2ds727tdjjasmo2oo2h4pa35n6zfzgw425p3h4/1.png" alt="Avatar" style="width: 100%; height: auto;">
-              </div>
-              <div class="back">
-                <img src="https://ipfs.pinnr.app/ipfs/bafybeibyznryi5paxbhxmjui6h24bbouh3mvwbtkqkz4tffmzmij3y4ph4/1.gif" alt="Avatar" style="width: 100%; height: auto;">
-              </div>
-            </div>
-        </div>
+            // --- Initial State ---
+            // Assuming Pixels view (front) is the default
+            updateButtonStates(false); // Set initial button states
 
+        }); // End document ready
+    </script>
 
-    </body>
+</body>
 </html>
